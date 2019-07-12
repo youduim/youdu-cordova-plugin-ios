@@ -47,7 +47,7 @@ cordova plugin remove cordova-labs-notification-rebroadcast
 
 ### 服务器设置
 ```
-cordova.plugins.YouDuIMPlugin.setServerSetting(host1, host2, port, success, error);
+cordova.plugins.YouduIM.setServerSetting(host1, host2, port, success, error);
 ```
 host1 外网服务器, host2 内网服务器, port 端口
 
@@ -55,7 +55,7 @@ success 成功回调函数, error 错误回调函数
 
 ### 登陆
 ```
-cordova.plugins.YouDuIMPlugin.loginWithAccount(account, password, success, error);
+cordova.plugins.YouduIM.loginWithAccount(account, password, success, error);
 ```
 
 account账号, password 密码,success 成功回调函数,error错误回调函数
@@ -76,7 +76,7 @@ error回调数据
 ```
 ### 注册消息推送(在调用登陆接口后调用该接口注册远程消息推送，第一个参数传true打开消息推送，false关闭消息推送)
 ```
-cordova.plugins.YouDuIMPlugin.RegisterForRemotePush(enablePush, success, error);
+cordova.plugins.YouduIM.RegisterForRemotePush(enablePush, success, error);
 ```
 enablePush打开消息推送开关 success 成功回调函数,error错误回调函数
 
@@ -117,17 +117,17 @@ success回调数据:
 ```
 ### 打开会话
 ```
-cordova.plugins.YouDuIMPlugin.gotoSession(sessionId, success, error);
+cordova.plugins.YouduIM.gotoSession(sessionId, success, error);
 ```
 sessionId 目标会话ID,success 成功回调函数,error错误回调函数
 ### 创建会话
 ```
-cordova.plugins.YouDuIMPlugin.gotoCreateSession(success, error);
+cordova.plugins.YouduIM.gotoCreateSession(success, error);
 ```
 success 成功回调函数,error错误回调函数
 ###退出登陆
 ```
-cordova.plugins.YouDuIMPlugin.logout(success, error);
+cordova.plugins.YouduIM.logout(success, error);
 ```
 success回调数据:
 {
@@ -137,7 +137,7 @@ success回调数据:
 error回调数据: 暂无
 ###获取未读消息数
 ```
-cordova.plugins.YouDuIMPlugin.getUnreadCount(success, error);
+cordova.plugins.YouduIM.getUnreadCount(success, error);
 ```
 success 成功回调函数 {"unreadCount" : 0}
 

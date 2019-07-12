@@ -145,10 +145,10 @@ error错误回调函数
 
 ###根据gids数组发起会话
 
-	```
-	cordova.plugins.YouduIMPlugin.chatWith(gids); 
-	```
-	gids： 用户gid数组，如[100334,100221]
+```
+cordova.plugins.YouduIMPlugin.chatWith(gids); 
+```
+gids： 用户gid数组，如[100334,100221]
 
 
 # iOS注意事项

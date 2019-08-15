@@ -31,7 +31,7 @@ cordova plugin ls 查看插件安装列表
 显示以下插件列表表示安装完成
 
 ```
-com.youdu.im 1.0.0 "YouDuIMPlugin"
+com.youdu.im 1.0.0 "YouduIMPlugin"
 cordova-labs-notification-rebroadcast 0.1.1 "Cordova Notification Rebroadcast Plugin"
 cordova-plugin-whitelist 1.3.3 "Whitelist"
 ```

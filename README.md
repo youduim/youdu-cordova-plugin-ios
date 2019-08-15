@@ -215,3 +215,38 @@ gids： 用户gid数组，如[100334,100221]
  * 新增创建会话接口
  
  
+# 关于ionic Cordova字段被设置位保留字段插件调用是会出现找不到插件的问题处理方式
+将cordova_plugins.js 中
+```
+module.exports = [
+  {
+    "id": "com.youdu.im.YouduIMPlugin",
+    "file": "plugins/com.youdu.im/www/YouduIMPlugin.js",
+    "pluginId": "com.youdu.im",
+    "clobbers": [
+      "cordova.plugins.YouduIMPlugin"
+    ]
+  }
+];
+```
+修改为
+```
+module.exports = [
+  {
+    "id": "com.youdu.im.YouduIMPlugin",
+    "file": "plugins/com.youdu.im/www/YouduIMPlugin.js",
+    "pluginId": "com.youdu.im",
+    "clobbers": [
+      "YouduIMPlugin"
+    ]
+  }
+];
+```
+
+###v1.0.0
+ * 新增获取会话列表接口
+ * 新增打开聊天窗口接口
+ * 新增服务器设置接口
+ * 新增登陆，注销接口
+ * 新增创建会话接口
+ 

@@ -215,7 +215,7 @@ gids： 用户gid数组，如[100334,100221]
  * 新增创建会话接口
  
  
-# 关于ionic Cordova字段被设置位保留字段插件调用是会出现找不到插件的问题处理方式
+# 关于ionic环境中cordova字段被设置位保留字段插件调用是会出现找不到插件的问题处理方式
 将cordova_plugins.js 中
 ```
 module.exports = [

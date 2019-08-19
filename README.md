@@ -55,7 +55,7 @@ success 成功回调函数, error 错误回调函数
 
 ### 登陆
 ```
-cordova.plugins.YouduIMPlugin.loginWithAccount(account, password, success, error);
+YouduIMPlugin.loginWithAccount(account, password, success, error);
 ```
 
 account账号, password 密码,success 成功回调函数,error错误回调函数
@@ -76,13 +76,13 @@ error回调数据
 ```
 ### 注册消息推送(在调用登陆接口后调用该接口注册远程消息推送，第一个参数传true打开消息推送，false关闭消息推送)
 ```
-cordova.plugins.YouduIMPlugin.RegisterForRemotePush(enablePush, success, error);
+YouduIMPlugin.RegisterForRemotePush(enablePush, success, error);
 ```
 enablePush打开消息推送开关 success 成功回调函数,error错误回调函数
 
 ### 获取会话列表
 ```
-cordova.plugins.YouduIMPlugin.getSessionList(success, error);
+YouduIMPlugin.getSessionList(success, error);
 ```
 
 success 回调函数获取会话列表信息 ,error错误回调函数
@@ -117,7 +117,7 @@ success回调数据:
 ```
 ### 打开会话
 ```
-cordova.plugins.YouduIMPlugin.gotoSession(sessionId, success, error);
+YouduIMPlugin.gotoSession(sessionId, success, error);
 ```
 sessionId 目标会话ID,success 成功回调函数,error错误回调函数
 ### 创建会话
@@ -127,7 +127,7 @@ cordova.plugins.YouduIMPlugin.gotoCreateSession(success, error);
 success 成功回调函数,error错误回调函数
 ###退出登陆
 ```
-cordova.plugins.YouduIMPlugin.logout(success, error);
+YouduIMPlugin.logout(success, error);
 ```
 success回调数据:
 {
@@ -137,7 +137,7 @@ success回调数据:
 error回调数据: 暂无
 ###获取未读消息数
 ```
-cordova.plugins.YouduIMPlugin.getUnreadCount(success, error);
+YouduIMPlugin.getUnreadCount(success, error);
 ```
 success 成功回调函数 {"unreadCount" : 0}
 
@@ -146,9 +146,16 @@ error错误回调函数
 ###根据gids数组发起会话
 
 ```
-cordova.plugins.YouduIMPlugin.chatWith(gids); 
+YouduIMPlugin.chatWith(gids); 
 ```
 gids： 用户gid数组，如[100334,100221]
+
+###根据accounts数组发起会话
+
+```
+YouduIMPlugin.chatWithAccounts(accounts); 
+```
+accounts： 用户名数组，如["cs1","cs2"]
 
 
 # iOS注意事项
